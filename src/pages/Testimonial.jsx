@@ -1,4 +1,4 @@
-import profile from '/image.png'
+import profile from '../assets/images/image.png'
 
 const Testimonial = () => {
   const testimonials = [
@@ -28,13 +28,12 @@ const Testimonial = () => {
     }
   ];
 
-  // Triple testimonials untuk smooth infinite scroll
   const duplicatedTestimonials = [...testimonials, ...testimonials, ...testimonials];
 
   return (
     <section id="testimonial" className="py-12 md:py-16 lg:py-20 bg-gradient-to-b from-white/90 to-orange-100">
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6">
-        {/* Section Header */}
+
         <div className="text-center mb-8 md:mb-12">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 md:mb-4">
             Testimonial
@@ -44,14 +43,12 @@ const Testimonial = () => {
           </p>
         </div>
 
-        {/* Testimonial Carousel */}
         <div className="relative overflow-hidden -mx-2">
           <div className="flex animate-continuous-slide space-x-6 px-2">
             {duplicatedTestimonials.map((testimonial, index) => (
               <div key={index} className="flex-shrink-0 w-full md:w-1/2 lg:w-1/2">
                 <div className="bg-white w-full min-h-[18rem] md:min-h-[17rem] shadow-lg rounded-xl overflow-hidden transition-shadow duration-300 flex flex-col p-5 md:p-6">
                   
-                  {/* Header Section */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-start space-x-3">
                       <div className="flex-shrink-0">
@@ -74,7 +71,6 @@ const Testimonial = () => {
                       </div>
                     </div>
 
-                    {/* Rating */}
                     <div className="flex-shrink-0 ml-3">
                       <div className="flex items-center space-x-1">
                         {[...Array(5)].map((_, starIndex) => {
@@ -104,7 +100,6 @@ const Testimonial = () => {
                     </div>
                   </div>
 
-                  {/* Testimonial Content */}
                   <div className="flex-1 relative">
                     <p className="text-sm md:text-base text-gray-700 leading-relaxed italic pl-3 pr-3 overflow-hidden">
                       "{testimonial.content}"

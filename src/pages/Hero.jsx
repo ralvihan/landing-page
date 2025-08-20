@@ -1,10 +1,12 @@
+import bgHeroImage from '../assets/images/bgHero.jpg';
+
 const Hero = () => {
   return (
     <section
       id="hero"
       className="min-h-screen flex items-center justify-center text-center px-4 relative"
       style={{
-        backgroundImage: 'url(/bghero.jpg)',
+        backgroundImage: `url(${bgHeroImage})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'

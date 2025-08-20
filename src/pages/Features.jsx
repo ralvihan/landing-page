@@ -1,8 +1,8 @@
 import { useRef } from "react";
 
 import linkedinImage from '../assets/images/linkedin.jpg';
-import jobHuntingImage from '../assets/images/job-hunting.jpg';
-import networkTipsImage from '../assets/images/networktips.jpg';
+import jobHuntingImage from '../assets/images/jobHunting.jpg';
+import networkTipsImage from '../assets/images/networkTips.jpg';
 import resumeImage from '../assets/images/resume.jpg';
 import interviewImage from '../assets/images/interview.jpg';
 

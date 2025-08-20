@@ -3,12 +3,10 @@ import { FaInstagram, FaFacebookF, FaYoutube, FaLinkedinIn, FaTwitter } from "re
 const Footer = () => {
   return (
     <footer className="bg-orange-900 bg-transparent text-gray-300 py-7" id="footer">
-      
-      {/* Top container for content */}
+
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-start gap-8">
           
-          {/* Left Section - Logo and Description */}
           <div className="md:w-1/2">
             <div className="mb-4">
               <img 
@@ -29,10 +27,8 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Right Section - Navigation and Customer */}
           <div className="flex flex-col md:flex-row gap-8">
             
-            {/* Navigation Section */}
             <div className="min-w-[140px]">
               <h3 className="text-white font-semibold text-lg mb-6">Navigasi Cepat</h3>
               <ul className="space-y-3">
@@ -41,7 +37,6 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Customer Section */}
             <div className="min-w-[120px]">
               <h3 className="text-white font-semibold text-lg mb-6">Customer</h3>
               <ul className="space-y-3">
@@ -53,17 +48,15 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom border full-width */}
-      <div className="border-t border-gray-400 mt-6"></div>
+      <div className="border-t border-orange-100 mt-6"></div>
 
-      {/* Bottom Bar */}
       <div className="max-w-6xl mx-auto px-6 mt-4 flex flex-col md:flex-row justify-between items-center gap-2">
         <p className="text-gray-200 text-center md:text-left text-sm">
-          Copyright © {new Date().getFullYear()} - All rights reserved
+          © {new Date().getFullYear()} B
         </p>
 
         <div className="flex items-center space-x-4 mt-2 md:mt-0">
-          <a href="https://www.instagram.com/raihan" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200 transition-colors">
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200 transition-colors">
             <FaInstagram className="w-5 h-5" />
           </a>
           <a href="https://x.com/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200e transition-colors">
