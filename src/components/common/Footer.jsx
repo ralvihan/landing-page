@@ -2,7 +2,7 @@ import { FaInstagram, FaFacebookF, FaYoutube, FaLinkedinIn, FaTwitter } from "re
 
 const Footer = () => {
   return (
-    <footer className="bg-orange-900 bg-transparent text-gray-300 py-7" id="footer">
+    <footer className="bg-orange-900 text-gray-300 py-7" id="footer">
 
       <div className="max-w-6xl mx-auto px-6">
         <div className="flex flex-col md:flex-row justify-between items-start gap-8">
@@ -30,7 +30,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row gap-8">
             
             <div className="min-w-[140px]">
-              <h3 className="text-white font-semibold text-lg mb-6">Navigasi Cepat</h3>
+              <h3 className="text-white font-semibold text-lg mb-6">Belajar</h3>
               <ul className="space-y-3">
                 <li><a href="#features" className="text-gray-200 hover:text-white transition-colors">Features</a></li>
                 <li><a href="#testimonial" className="text-gray-200 hover:text-white transition-colors">Testimonial</a></li>
