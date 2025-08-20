@@ -7,7 +7,6 @@ const Header = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const closeMenu = () => setIsMenuOpen(false);
 
-  // Smooth scroll function + update URL
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -17,7 +16,7 @@ const Header = () => {
       });
       window.history.pushState(null, null, `#${sectionId}`);
     }
-    closeMenu(); // Close mobile menu after clicking
+    closeMenu();
   };
 
   useEffect(() => {
@@ -48,7 +47,7 @@ const Header = () => {
     >
       <div className="max-w-5xl mx-auto flex justify-between items-center p-4 px-6 md:px-8">
         <div className="flex items-center space-x-2">
-          <img src="/logodummy.svg" alt="Logo" className="w-8 h-8" />
+          <img src="/B.svg" alt="Logo" className="w-8 h-8" />
         </div>
 
         {/* Desktop menu */}

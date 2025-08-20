@@ -10,10 +10,9 @@ const Hero = () => {
         backgroundRepeat: 'no-repeat'
       }}
     >
-      {/* Gradient Overlay */}
+    
       <div className="absolute inset-0 bg-gradient-to-b from-white/70 to-orange-100"></div>
       
-      {/* Content */}
       <div className="max-w-4xl mx-auto space-y-3 md:space-y-4 lg:space-y-6 relative z-10">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight">
           Unlock Your Career Potential with LinkedIn

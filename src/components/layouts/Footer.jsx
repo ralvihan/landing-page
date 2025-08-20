@@ -1,120 +1,86 @@
-import { FaInstagram, FaFacebook, FaYoutube } from "react-icons/fa";
+import { FaInstagram, FaFacebookF, FaYoutube, FaLinkedinIn, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
-  const currentYear = new Date().getFullYear();
-
-  const footerLinks = { 
-    product: [
-      { name: "Features", href: "#features" },
-      { name: "Testimonials", href: "#testimonial" },
-      { name: "Pricing", href: "#pricing" }
-    ],
-    company: [
-      { name: "About Us", href: "#about" },
-      { name: "Contact", href: "#contact" },
-      { name: "Blog", href: "#blog" }
-    ],
-    support: [
-      { name: "Help Center", href: "#help" },
-      { name: "Privacy Policy", href: "#privacy" },
-      { name: "Terms of Service", href: "#terms" }
-    ]
-  };
-
-  const socialLinks = [
-    { icon: FaInstagram, url: "https://instagram.com" },
-    { icon: FaFacebook, url: "https://facebook.com" },,  
-    { icon: FaYoutube, url: "https://youtube.com" },
-  ];
-
   return (
-    <footer id="footer" className="bg-orange-950 text-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 md:gap-8">
-        
-        {/* Brand */}
-        <div className="lg:col-span-1">
-          <h3 className="text-lg md:text-xl font-bold mb-3 md:mb-4">Logo LinkedIn</h3>
-          <p className="text-sm md:text-base text-gray-300 mb-4 md:mb-6 leading-relaxed">
-            Master your LinkedIn presence and accelerate your career growth.
-          </p>
-        </div>
+    <footer className="bg-orange-900 bg-transparent text-gray-300 py-7" id="footer">
+      
+      {/* Top container for content */}
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="flex flex-col md:flex-row justify-between items-start gap-8">
+          
+          {/* Left Section - Logo and Description */}
+          <div className="md:w-1/2">
+            <div className="mb-4">
+              <img 
+                src="/B.svg" 
+                alt="Logo B" 
+                className="w-12 h-12 mb-4"
+              />
+            </div>
 
-        {/* Product */}
-        <div>
-          <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4">Product</h4>
-          <ul className="space-y-2">
-            {footerLinks.product.map((link, i) => (
-              <li key={i}>
-                <a href={link.href} className="text-sm md:text-base text-gray-300 hover:text-white transition-colors duration-200">
-                  {link.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
+            <p className="text-gray-200 leading-relaxed mb-6">
+              Unlock Your Career Potential with LinkedIn<br/>
+              Personal Branding & Networking untuk Dapat Kerja Lebih Cepat
+            </p>
 
-        {/* Company */}
-        <div>
-          <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4">Company</h4>
-          <ul className="space-y-2">
-            {footerLinks.company.map((link, i) => (
-              <li key={i}>
-                <a href={link.href} className="text-sm md:text-base text-gray-300 hover:text-white transition-colors duration-200">
-                  {link.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
+            <div className="space-y-2">
+              <p className="text-gray-200">email@example.com</p>
+              <p className="text-gray-200">+62 123-1456-7890</p>
+            </div>
+          </div>
 
-        {/* Support */}
-        <div>
-          <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4">Support</h4>
-          <ul className="space-y-2">
-            {footerLinks.support.map((link, i) => (
-              <li key={i}>
-                <a href={link.href} className="text-sm md:text-base text-gray-300 hover:text-white transition-colors duration-200">
-                  {link.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
+          {/* Right Section - Navigation and Customer */}
+          <div className="flex flex-col md:flex-row gap-8">
+            
+            {/* Navigation Section */}
+            <div className="min-w-[140px]">
+              <h3 className="text-white font-semibold text-lg mb-6">Navigasi Cepat</h3>
+              <ul className="space-y-3">
+                <li><a href="#features" className="text-gray-200 hover:text-white transition-colors">Features</a></li>
+                <li><a href="#testimonial" className="text-gray-200 hover:text-white transition-colors">Testimonial</a></li>
+              </ul>
+            </div>
 
-        {/* Contact */}
-        <div>
-          <h4 className="text-base md:text-lg font-semibold mb-3 md:mb-4">Kontak</h4>
-          <p className="text-sm md:text-base text-gray-300 mb-2">email@example.com</p>
-          <div className="flex space-x-3 md:space-x-4">
-            {socialLinks.map((item, i) => {
-              const Icon = item.icon;
-              return (
-                <a 
-                  key={i} 
-                  href={item.url} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="text-gray-300 hover:text-white transition-colors duration-200 text-xl"
-                >
-                  <Icon />
-                </a>
-              );
-            })}
+            {/* Customer Section */}
+            <div className="min-w-[120px]">
+              <h3 className="text-white font-semibold text-lg mb-6">Customer</h3>
+              <ul className="space-y-3">
+                <li><a href="#" className="text-gray-200 hover:text-white transition-colors">Client Support</a></li>
+                <li><a href="#" className="text-gray-200 hover:text-white transition-colors">Latest News</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
+
+      {/* Bottom border full-width */}
+      <div className="border-t border-gray-400 mt-6"></div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-800">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-6 flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
-          <p className="text-xs md:text-sm text-gray-400">© {currentYear} LinkedIn React. All rights reserved.</p>
-          <div className="flex space-x-4 md:space-x-6">
-            <a href="#privacy" className="text-xs md:text-sm text-gray-400 hover:text-white transition-colors duration-200">Privacy</a>
-            <a href="#terms" className="text-xs md:text-sm text-gray-400 hover:text-white transition-colors duration-200">Terms</a>
-            <a href="#cookies" className="text-xs md:text-sm text-gray-400 hover:text-white transition-colors duration-200">Cookies</a>
-          </div>
+      <div className="max-w-6xl mx-auto px-6 mt-4 flex flex-col md:flex-row justify-between items-center gap-2">
+        <p className="text-gray-200 text-center md:text-left text-sm">
+          Copyright © {new Date().getFullYear()} - All rights reserved
+        </p>
+
+        <div className="flex items-center space-x-4 mt-2 md:mt-0">
+          <a href="https://www.instagram.com/raihan" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200 transition-colors">
+            <FaInstagram className="w-5 h-5" />
+          </a>
+          <a href="https://x.com/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200e transition-colors">
+            <FaTwitter className="w-5 h-5" />
+          </a>
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200 transition-colors">
+            <FaFacebookF className="w-5 h-5" />
+          </a>
+          <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200 transition-colors">
+            <FaYoutube className="w-5 h-5" />
+          </a>
+          <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200 transition-colors">
+            <FaLinkedinIn className="w-5 h-5" />
+          </a>
         </div>
       </div>
+
     </footer>
   );
 };

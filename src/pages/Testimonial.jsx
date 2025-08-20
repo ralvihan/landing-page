@@ -14,7 +14,7 @@ const Testimonial = () => {
       name: "Alvian", 
       role: "Mahasiswa",
       company: "Jakarta Global University",
-      content: "“Panduan ini sangat membantu bagi siapa saja yang serius mencari pekerjaan. Dari membuat resume yang menarik, mempersiapkan wawancara dengan strategi yang tepat, hingga membangun jaringan yang relevan, semuanya dijelaskan secara rinci dan praktis. Saya berhasil mengaplikasikan semua tipsnya dalam proses rekrutmen terakhir saya, dan hasilnya langsung terasa. Materinya sangat berguna, mudah diikuti, dan memberikan nilai tambah nyata.",
+      content: "Panduan ini sangat membantu bagi siapa saja yang serius mencari pekerjaan. Dari membuat resume yang menarik, mempersiapkan wawancara dengan strategi yang tepat, hingga membangun jaringan yang relevan, semuanya dijelaskan secara rinci dan praktis. Saya berhasil mengaplikasikan semua tipsnya dalam proses rekrutmen terakhir saya, dan hasilnya langsung terasa. Materinya sangat berguna, mudah diikuti, dan memberikan nilai tambah nyata.",
       photo: profile,
       rating: 4
     },
@@ -46,20 +46,14 @@ const Testimonial = () => {
 
         {/* Testimonial Carousel */}
         <div className="relative overflow-hidden -mx-2">
-          {/* Continuous Sliding Container */}
           <div className="flex animate-continuous-slide space-x-6 px-2">
             {duplicatedTestimonials.map((testimonial, index) => (
-              <div 
-                key={index}
-                className="flex-shrink-0 w-full md:w-1/2 lg:w-1/2"
-              >
-                {/* Card dengan ukuran fleksibel */}
+              <div key={index} className="flex-shrink-0 w-full md:w-1/2 lg:w-1/2">
                 <div className="bg-white w-full min-h-[18rem] md:min-h-[17rem] shadow-lg rounded-xl overflow-hidden transition-shadow duration-300 flex flex-col p-5 md:p-6">
+                  
                   {/* Header Section */}
                   <div className="flex items-start justify-between mb-4">
-                    {/* Left: Photo + Info */}
                     <div className="flex items-start space-x-3">
-                      {/* Photo */}
                       <div className="flex-shrink-0">
                         <img
                           src={testimonial.photo}
@@ -71,22 +65,16 @@ const Testimonial = () => {
                           }}
                         />
                       </div>
-
-                      {/* Name, Role, Company */}
                       <div className="flex-1 min-w-0">
                         <h4 className="text-base md:text-lg font-bold text-gray-900 leading-tight mb-1">
                           {testimonial.name}
                         </h4>
-                        <p className="text-sm text-gray-600 mb-1">
-                          {testimonial.role}
-                        </p>
-                        <p className="text-sm text-orange-800 font-semibold">
-                          {testimonial.company}
-                        </p>
+                        <p className="text-sm text-gray-600 mb-1">{testimonial.role}</p>
+                        <p className="text-sm text-orange-800 font-semibold">{testimonial.company}</p>
                       </div>
                     </div>
 
-                    {/* Right: Rating */}
+                    {/* Rating */}
                     <div className="flex-shrink-0 ml-3">
                       <div className="flex items-center space-x-1">
                         {[...Array(5)].map((_, starIndex) => {
@@ -95,34 +83,16 @@ const Testimonial = () => {
 
                           return (
                             <div key={starIndex} className="relative w-4 h-4">
-                              {/* Base star abu-abu */}
-                              <svg
-                                className="w-4 h-4 text-gray-300 absolute top-0 left-0"
-                                fill="currentColor"
-                                viewBox="0 0 20 20"
-                              >
+                              <svg className="w-4 h-4 text-gray-300 absolute top-0 left-0" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                               </svg>
-
-                              {/* Star kuning full */}
                               {isFull && (
-                                <svg
-                                  className="w-4 h-4 text-yellow-400 absolute top-0 left-0"
-                                  fill="currentColor"
-                                  viewBox="0 0 20 20"
-                                >
+                                <svg className="w-4 h-4 text-yellow-400 absolute top-0 left-0" fill="currentColor" viewBox="0 0 20 20">
                                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                                 </svg>
                               )}
-
-                              {/* Star kuning half */}
                               {isHalf && (
-                                <svg
-                                  className="w-4 h-4 text-yellow-400 absolute top-0 left-0"
-                                  fill="currentColor"
-                                  viewBox="0 0 20 20"
-                                  style={{ clipPath: "inset(0 50% 0 0)" }}
-                                >
+                                <svg className="w-4 h-4 text-yellow-400 absolute top-0 left-0" fill="currentColor" viewBox="0 0 20 20" style={{ clipPath: "inset(0 50% 0 0)" }}>
                                   <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                                 </svg>
                               )}
@@ -136,16 +106,11 @@ const Testimonial = () => {
 
                   {/* Testimonial Content */}
                   <div className="flex-1 relative">
-                    <div className="text-2xl text-orange-200 absolute -top-1 -left-1 z-10">
-                      "
-                    </div>
                     <p className="text-sm md:text-base text-gray-700 leading-relaxed italic pl-3 pr-3 overflow-hidden">
-                      {testimonial.content}
+                      "{testimonial.content}"
                     </p>
-                    <div className="text-2xl text-orange-200 absolute -bottom-1 right-0 z-10">
-                      "
-                    </div>
                   </div>
+
                 </div>
               </div>
             ))}
@@ -153,24 +118,6 @@ const Testimonial = () => {
         </div>
       </div>
 
-      <style jsx>{`
-        @keyframes continuous-slide {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-100%);
-          }
-        }
-        
-        .animate-continuous-slide {
-          animation: continuous-slide 60s linear infinite;
-        }
-        
-        .animate-continuous-slide:hover {
-          animation-play-state: paused;
-        }
-      `}</style>
     </section>
   )
 }
